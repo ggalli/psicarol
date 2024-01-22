@@ -7,11 +7,22 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '24px'
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        seasons: ['var(--font-seasons-bold)'],
+        roboto: ['var(--font-roboto)'],
+      },
+      colors: {
+        green: '#48644D',
+        beige: '#C9B474',
+        sand: '#C1A788',
+        dark: '#433F3E',
+        light: '#F8F9F0',
+        white: '#FFFFFF'
       },
     },
   },

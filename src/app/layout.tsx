@@ -1,8 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
+import { twMerge } from 'tailwind-merge'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-roboto' })
+
+const theSeasons = localFont({
+  src: './assets/fonts/theseasons-bold.otf',
+  display: 'swap',
+  weight: 'bold',
+  variable: '--font-seasons-bold'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={twMerge(theSeasons.variable, roboto.variable)}>
+      <body className={roboto.className}>{children}</body>
     </html>
   )
 }

@@ -2,26 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #F8F9F0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-seasons-bold);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 100%;
+  color: #C1A788;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 120%;
+  color: #C9B474;
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 120%;
+}
+
+section {
+  padding: 56px 0;
+}
+
+.button {
+  all: unset;
+  padding: 16px 32px;
+  border: 1px solid #433F3E;
+  color: #433F3E;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: rgba(255, 255, 255, .4);
+  backdrop-filter: blur(16px);
+}
+
+.burger {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: 28px;
+  height: 28px;
+  border: 0px;
+  padding: 0px;
+  background: transparent;
+  transition: all 250ms ease-out;
+  cursor: pointer;
+}
+
+.burger:before,
+.burger:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background: #C1A788;
+  transition: all 250ms ease-out;
+  will-change: transform;
+}
+
+.burger:before {
+  transform: translateY(-6px);
+}
+
+.burger:after {
+  transform: translateY(6px);
+}
+
+.active.burger:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.active.burger:after {
+  transform: translateY(0) rotate(-45deg);
 }
