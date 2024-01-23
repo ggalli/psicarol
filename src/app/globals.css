@@ -58,6 +58,7 @@ section {
   background: transparent;
   transition: all 250ms ease-out;
   cursor: pointer;
+  z-index: 999;
 }
 
 .burger:before,
@@ -79,10 +80,10 @@ section {
   transform: translateY(6px);
 }
 
-.active.burger:before {
+.burger.open:before {
   transform: translateY(0) rotate(45deg);
 }
 
-.active.burger:after {
+.burger.open:after {
   transform: translateY(0) rotate(-45deg);
 }
