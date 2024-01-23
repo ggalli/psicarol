@@ -1,27 +1,13 @@
 import Image from "next/image";
-import { MdDevices, MdMailOutline } from "react-icons/md";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./components/Accordion";
-import { IoLocationOutline } from "react-icons/io5";
+import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./components";
+import { MdDevices, MdMailOutline, MdWhatsapp } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
-import { FiInstagram, FiPhone } from "react-icons/fi";
+import { FiInstagram } from "react-icons/fi";
 
 export default function Home() {
   return (
     <>
-      <header className="fixed w-full top-0 border-b border-sand bg-transparent">
-        <div className="container">
-          <nav className="flex justify-between items-center py-5">
-            <div className="w-10 h-10 bg-slate-300"></div>
-            <button className="burger"></button>
-
-            {/* <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul> */}
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main>
         <section className="h-screen bg-slate-200 pt-40 border-b border-sand">
@@ -139,7 +125,7 @@ export default function Home() {
                   <p>São Paulo - SP</p>
                 </div>
                 <div className="flex gap-4">
-                  <FiPhone size={24} />
+                  <MdWhatsapp size={24} />
                   <p>(11) 91234-1234</p>
                 </div>
                 <div className="flex gap-4">
@@ -156,7 +142,6 @@ export default function Home() {
             <div className="h-px w-full bg-beige mb-4 mt-10"></div>
 
             <p className="text-sm text-center">Todos os direitos reservados. <br /> Desenvolvido por Guilherme Galli </p>
-            {/* <p>Desenvolvido por Guilherme Galli</p> */}
           </div>
         </footer>
       </main>
