@@ -24,6 +24,14 @@ const config: Config = {
         light: '#F8F9F0',
         white: '#FFFFFF'
       },
+      backgroundImage: {
+        'hero-desktop': 'url("/images/bg-hero-desktop.png")',
+        'hero-tablet': 'url("/images/bg-hero-tablet.png")',
+        'hero-mobile': 'url("/images/bg-hero-mobile.png")',
+        'green-plants-desktop': 'url("/images/bg-green-desktop.png")',
+        'green-plants-tablet': 'url("/images/bg-green-tablet.png")',
+        'green-plants-mobile': 'url("/images/bg-green-mobile.png")',
+      }
     },
   },
   plugins: [],
