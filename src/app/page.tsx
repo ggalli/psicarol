@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="h-screen bg-slate-200 pt-40 border-b border-sand">
+        <section className="hero h-screen bg-slate-200 pt-40 border-b-2 border-sand bg-hero-mobile bg-no-repeat bg-cover bg-fixed bg-[80%]">
           <div className="container">
             <p className="uppercase text-sand tracking-[.25em] mb-2">Psicóloga CRP: 12/12345</p>
             <h1>Carol Godoy</h1>
@@ -56,13 +56,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-green">
+        <section className="bg-green border-y-2 border-sand bg-green-plants-mobile bg-no-repeat bg-cover bg-right bg-fixed">
           <div className="container">
             <h2 className="text-center mb-8">Temas abordados</h2>
 
             <div className="grid grid-cols-1 gap-8">
               {Array.from(Array(6)).map((i, j) => (
-                <div key={j} className="p-6 border border-light/40 bg-white/25 backdrop-blur-lg text-light">
+                <div key={j} className="p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light">
                   <p className="text-lg font-bold mb-4">Lorem ipsum dolor sit amet</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus.</p>
                 </div>
@@ -114,7 +114,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="bg-green text-beige pt-14 pb-2">
+        <footer className="bg-green text-beige pt-14 pb-2 border-t-2 border-sand">
           <div className="container">
             <div className="flex flex-col gap-10">
               <div className="w-32 h-32 bg-slate-300 border border-sand"></div>
