@@ -7,7 +7,7 @@ import { twMerge } from 'tailwind-merge'
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-roboto' })
 
 const theSeasons = localFont({
-  src: './assets/fonts/theseasons-bold.otf',
+  src: './fonts/theseasons-bold.otf',
   display: 'swap',
   weight: 'bold',
   variable: '--font-seasons-bold'
