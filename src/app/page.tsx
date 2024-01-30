@@ -22,9 +22,9 @@ export default function Home() {
         <section className="md:p-0">
           <div className="container">
             <div className="flex flex-col border border-sand relative md:-top-20 md:flex-row">
-              <Image src="" alt="Foto da Carol Godoy" className="w-full h-[360px] border-b border-sand bg-slate-300 md:border-0 md:border-r md:h-auto" />
+              <Image src="" alt="Foto da Carol Godoy" className="w-full min-h-[360px] border-b border-sand bg-slate-300 md:border-0 md:border-r md:w-2/5" />
 
-              <div className="p-6 bg-white/40 backdrop-blur-xl text-lg">
+              <div className="p-6 bg-white/40 backdrop-blur-xl text-lg md:w-3/5">
                 <h2 className="mb-6">Sobre mim</h2>
                 <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
                 <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
@@ -60,9 +60,9 @@ export default function Home() {
           <div className="container">
             <h2 className="text-center mb-8">Temas abordados</h2>
 
-            <div className="grid grid-cols-1 gap-8">
+            <div className="flex flex-wrap justify-center lg:justify-between gap-8">
               {Array.from(Array(6)).map((i, j) => (
-                <div key={j} className="p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light">
+                <div key={j} className="p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light md:max-w-72 justify-self-center">
                   <p className="text-lg font-bold mb-4">Lorem ipsum dolor sit amet</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus.</p>
                 </div>
@@ -75,12 +75,12 @@ export default function Home() {
           <div className="container">
             <h2 className="text-center mb-8">Modalidades de atendimento</h2>
 
-            <div className="flex flex-col border border-sand bg-white text-dark">
-              <div className="flex justify-center items-center min-h-52 border-b border-sand">
+            <div className="flex flex-col border border-sand bg-white text-dark md:flex-row">
+              <div className="flex justify-center items-center min-h-52 border-b border-sand md:border-0 md:border-r md:w-2/5">
                 <MdDevices size={96} />
               </div>
 
-              <div>
+              <div className="md:w-3/5">
                 <div className="p-6">
                   <p className="text-xl font-bold mb-4">Online</p>
                   <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus.</p>
@@ -116,7 +116,7 @@ export default function Home() {
 
         <footer className="bg-green text-beige pt-14 pb-2 border-t-2 border-sand">
           <div className="container">
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 md:flex-row md:justify-between">
               <div className="w-32 h-32 bg-slate-300 border border-sand"></div>
 
               <div className="flex flex-col gap-4">
@@ -141,7 +141,10 @@ export default function Home() {
 
             <div className="h-px w-full bg-beige mb-4 mt-10"></div>
 
-            <p className="text-sm text-center">Todos os direitos reservados. <br /> Desenvolvido por Guilherme Galli </p>
+            <div className="flex flex-col text-sm text-center md:flex-row md:justify-between">
+              <p>Todos os direitos reservados.</p>
+              <p>Desenvolvido por Guilherme Galli</p>
+            </div>
           </div>
         </footer>
       </main>
