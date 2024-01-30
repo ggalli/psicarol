@@ -10,21 +10,21 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="hero h-screen bg-slate-200 pt-40 border-b-2 border-sand bg-hero-mobile bg-no-repeat bg-cover bg-fixed bg-[80%]">
+        <section className="hero h-screen bg-slate-200 pt-40 border-b-2 border-sand bg-hero-mobile bg-no-repeat bg-cover bg-fixed bg-[80%] md:bg-hero-tablet md:bg-[80%] md:max-h-[662px] lg:bg-[100%] xl:bg-hero-desktop">
           <div className="container">
             <p className="uppercase text-sand tracking-[.25em] mb-2">Psicóloga CRP: 12/12345</p>
             <h1>Carol Godoy</h1>
-            <p className="text-dark mt-10 mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit.</p>
+            <p className="text-dark mt-10 mb-16 max-w-96 md:mt-6 md:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit.</p>
             <button className="button">Entre em contato</button>
           </div>
         </section>
 
-        <section>
+        <section className="md:p-0">
           <div className="container">
-            <div className="flex flex-col border border-sand">
-              <Image src="" alt="Foto da Carol Godoy" className="w-full h-[360px] border-b border-sand bg-slate-300" />
+            <div className="flex flex-col border border-sand relative md:-top-20 md:flex-row">
+              <Image src="" alt="Foto da Carol Godoy" className="w-full h-[360px] border-b border-sand bg-slate-300 md:border-0 md:border-r md:h-auto" />
 
-              <div className="p-6 bg-white/70 backdrop-blur-xl text-lg">
+              <div className="p-6 bg-white/40 backdrop-blur-xl text-lg">
                 <h2 className="mb-6">Sobre mim</h2>
                 <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
                 <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
