@@ -41,8 +41,8 @@ section {
   color: #433F3E;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: rgba(255, 255, 255, .4);
-  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(10px);
 }
 
 .burger {
