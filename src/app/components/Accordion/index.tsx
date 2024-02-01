@@ -26,7 +26,7 @@ export function AccordionTrigger(props: ComponentProps<typeof AccordionPrimitive
         {...props}
         className={twMerge(
           'accordionTrigger flex items-center justify-between gap-4 flex-1 text-primary-700 text-left p-4',
-          'font-roboto font-bold text-base'
+          'font-roboto font-bold text-base text-dark'
         )}
       >
         {props.children}
