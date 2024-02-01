@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #F8F9F0;
+  color: #433F3E;
 }
 
 h1,
@@ -28,6 +33,7 @@ h2 {
 h3 {
   font-size: 1.75rem;
   line-height: 120%;
+  color: #C9B474;
 }
 
 section {
@@ -36,6 +42,7 @@ section {
 
 .button {
   all: unset;
+  display: inline-block;
   padding: 16px 32px;
   border: 1px solid #433F3E;
   color: #433F3E;
@@ -43,6 +50,12 @@ section {
   letter-spacing: .1em;
   background: rgba(255, 255, 255, .2);
   backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.button:hover {
+  background: rgba(67, 63, 62, 0.05)
 }
 
 .burger {
@@ -86,4 +99,40 @@ section {
 
 .burger.open:after {
   transform: translateY(0) rotate(-45deg);
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 120px 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  section {
+    padding: 160px 0;
+  }
 }
