@@ -1,8 +1,10 @@
 import Image from "next/image";
+import NextLink from 'next/link';
 import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./components";
 import { MdDevices, MdMailOutline, MdWhatsapp } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
 import { FiInstagram } from "react-icons/fi";
+import { INSTAGRAM_LINK, WPP_LINK } from "./utils";
 
 export default function Home() {
   return (
@@ -10,12 +12,12 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="hero h-screen bg-slate-200 pt-40 border-b-2 border-sand bg-hero-mobile bg-no-repeat bg-cover bg-fixed bg-[80%] md:bg-hero-tablet md:bg-[80%] md:max-h-[662px] lg:bg-[100%] xl:bg-hero-desktop">
+        <section id="home" className="hero h-screen bg-slate-200 pt-40 border-b-2 border-sand bg-hero-mobile bg-no-repeat bg-cover bg-fixed bg-[80%] md:bg-hero-tablet md:bg-[80%] md:max-h-[662px] lg:bg-[100%] xl:bg-hero-desktop">
           <div className="container">
-            <p className="uppercase text-sand tracking-[.25em] mb-2">Psicóloga CRP: 12/12345</p>
+            <p className="uppercase text-sand tracking-[.25em] mb-2 lg:text-lg">Psicóloga CRP: 12/12345</p>
             <h1>Carol Godoy</h1>
             <p className="text-dark mt-10 mb-16 max-w-96 md:mt-6 md:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit.</p>
-            <button className="button">Entre em contato</button>
+            <NextLink href={WPP_LINK} className="button">Entre em contato</NextLink>
           </div>
         </section>
 
@@ -24,8 +26,8 @@ export default function Home() {
             <div className="flex flex-col border border-sand relative md:-top-20 md:flex-row">
               <Image src="" alt="Foto da Carol Godoy" className="w-full min-h-[360px] border-b border-sand bg-slate-300 md:border-0 md:border-r md:w-2/5" />
 
-              <div className="p-6 bg-white/40 backdrop-blur-xl text-lg md:w-3/5">
-                <h2 className="mb-6">Sobre mim</h2>
+              <div className="p-6 bg-white/40 backdrop-blur-xl lg:text-lg md:w-3/5">
+                <h3 className="mb-6">Sobre mim</h3>
                 <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
                 <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
@@ -34,31 +36,31 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        <section className="pt-0 lg:pt-14">
           <div className="container">
-            <h2 className="text-center mb-8">A importância da psicoterapia</h2>
+            <h2 className="text-center mb-14">A importância da psicoterapia</h2>
 
-            <div className="p-6 bg-white border border-sand text-lg">
+            <div className="p-6 bg-white border border-sand lg:text-lg">
               <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
             </div>
           </div>
         </section>
 
-        <section>
+        <section className="pt-0">
           <div className="container">
-            <h2 className="text-center mb-8">Quando fazer terapia?</h2>
+            <h2 className="text-center mb-14">Quando fazer terapia?</h2>
 
-            <div className="p-6 bg-white border border-sand text-lg">
+            <div className="p-6 bg-white border border-sand lg:text-lg">
               <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
             </div>
           </div>
         </section>
 
-        <section className="bg-green border-y-2 border-sand bg-green-plants-mobile bg-no-repeat bg-cover bg-right bg-fixed">
+        <section id="temas" className="bg-green border-y-2 border-sand bg-green-plants-mobile bg-no-repeat bg-cover bg-right bg-fixed md:bg-green-plants-tablet md:bg-left lg:bg-green-plants-desktop">
           <div className="container">
-            <h2 className="text-center mb-8">Temas abordados</h2>
+            <h2 className="text-center mb-14">Temas abordados</h2>
 
             <div className="flex flex-wrap justify-center lg:justify-between gap-8">
               {Array.from(Array(6)).map((i, j) => (
@@ -71,9 +73,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        <section id="modalidades" className="pb-0">
           <div className="container">
-            <h2 className="text-center mb-8">Modalidades de atendimento</h2>
+            <h2 className="text-center mb-14">Modalidades de atendimento</h2>
 
             <div className="flex flex-col border border-sand bg-white text-dark md:flex-row">
               <div className="flex justify-center items-center min-h-52 border-b border-sand md:border-0 md:border-r md:w-2/5">
@@ -87,17 +89,17 @@ export default function Home() {
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus.</p>
                 </div>
 
-                <div className="uppercase text-sand text-lg text-center tracking-widest p-4 border-t border-sand cursor-pointer">
+                <NextLink href={WPP_LINK} className="block uppercase text-sand text-lg text-center tracking-widest p-4 border-t border-sand cursor-pointer hover:bg-sand/10 transition">
                   Entre em contato
-                </div>
+                </NextLink>
               </div>
             </div>
           </div>
         </section>
 
-        <section>
+        <section id="duvidas">
           <div className="container">
-            <h2 className="text-center mb-8">Dúvidas frequentes</h2>
+            <h2 className="text-center mb-14">Dúvidas frequentes</h2>
 
             {Array.from(Array(5)).map((i, j) => (
               <Accordion type="single" collapsible key={j}>
@@ -124,18 +126,18 @@ export default function Home() {
                   <GrLocation size={24} />
                   <p>São Paulo - SP</p>
                 </div>
-                <div className="flex gap-4">
+                <NextLink href={WPP_LINK} target="_blank" className="flex gap-4">
                   <MdWhatsapp size={24} />
-                  <p>(11) 91234-1234</p>
-                </div>
-                <div className="flex gap-4">
-                  <MdMailOutline size={24} />
-                  <p>psi.carolgodoy@gmail.com</p>
-                </div>
-                <div className="flex gap-4">
+                  <p>(11) 95437-2430</p>
+                </NextLink>
+                <NextLink href={INSTAGRAM_LINK} target="_blank" className="flex gap-4">
                   <FiInstagram size={24} />
                   <p>@psicologa.carol</p>
-                </div>
+                </NextLink>
+                <NextLink href='mailto:psi.carolgodoy@gmail.com' className="flex gap-4">
+                  <MdMailOutline size={24} />
+                  <p>psi.carolgodoy@gmail.com</p>
+                </NextLink>
               </div>
             </div>
 
@@ -147,7 +149,7 @@ export default function Home() {
             </div>
           </div>
         </footer>
-      </main>
+      </main >
     </>
   )
 }
