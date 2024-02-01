@@ -1,12 +1,18 @@
 'use client'
 
 import { PropsWithChildren, useEffect, useState } from "react"
+import NextLink, { LinkProps } from 'next/link';
 import { twMerge } from "tailwind-merge"
 import { MdWhatsapp } from "react-icons/md"
 import { FiInstagram } from "react-icons/fi";
+import { INSTAGRAM_LINK, WPP_LINK } from "../utils";
 
-const Link = ({ children }: PropsWithChildren) => {
-  return <li className="text-3xl text-sand lg:text-base">{children}</li>
+const Link = ({ children, ...props }: PropsWithChildren<LinkProps>) => {
+  return (
+    <li>
+      <NextLink className="text-3xl text-sand lg:text-base hover:border-b border-sand" {...props}>{children}</NextLink>
+    </li>
+  )
 }
 
 export function Header() {
@@ -35,26 +41,32 @@ export function Header() {
     <header className={twMerge("fixed w-full top-0 z-50 transition-all", hasScrolled ? "backdrop-blur-md bg-white/20 shadow-lg" : "bg-transparent")}>
       <div className="container">
         <nav className="flex justify-between items-center py-4">
-          <div className="w-10 h-10 bg-slate-300 lg:mr-24"></div>
+          <div className="w-12 h-12 bg-slate-300 shrink-0"></div>
+
           <button className={twMerge("burger", isOpen && 'open', 'lg:hidden')} onClick={toggleMenu}></button>
 
-          <ul className={twMerge(
+          <div className={twMerge(
             "absolute top-0 left-0 w-full h-screen bg-white z-50 translate-x-0",
-            "flex flex-col items-center gap-10 pt-28 transition-all ease-in-out duration-300",
+            "flex flex-col items-center pt-28 transition-all ease-in-out duration-300",
             !isOpen && 'translate-x-full',
-            'lg:relative lg:h-auto lg:bg-transparent lg:flex-row lg:p-0 lg:translate-x-0 lg:justify-between'
+            'lg:relative lg:h-auto lg:bg-transparent lg:flex-row lg:p-0 lg:translate-x-0'
           )}>
-            <Link>Início</Link>
-            <Link>Temas</Link>
-            <Link>Modalidades</Link>
-            <Link>Dúvidas</Link>
+            <ul className="text-center flex flex-col gap-8 lg:flex-row lg:flex-1 lg:justify-center lg:gap-16">
+              <Link href='#home'>Início</Link>
+              <Link href='#temas'>Temas</Link>
+              <Link href='#modalidades'>Modalidades</Link>
+              <Link href='#duvidas'>Dúvidas</Link>
+            </ul>
 
-            <div className="flex border border-sand text-sand lg:border-0 lg:gap-4">
-              <MdWhatsapp size={28} className="my-2 mx-6 lg:m-0" />
-              <div className="h-full w-px bg-sand lg:hidden "></div>
-              <FiInstagram size={28} className="my-2 mx-6 lg:m-0" />
+            <div className="flex text-sand mt-6 lg:mt-0 lg:gap-2">
+              <NextLink href={WPP_LINK} target="_blank" className="p-2 lg:p-1">
+                <MdWhatsapp size={28} />
+              </NextLink>
+              <NextLink href={INSTAGRAM_LINK} target="_blank" className="p-2 lg:p-1">
+                <FiInstagram size={28} />
+              </NextLink>
             </div>
-          </ul>
+          </div>
         </nav>
       </div>
     </header>
