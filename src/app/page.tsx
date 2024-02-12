@@ -1,6 +1,5 @@
-import Image from "next/image";
 import NextLink from 'next/link';
-import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./components";
+import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger, PhotoCarousel } from "./components";
 import { MdDevices, MdMailOutline, MdWhatsapp } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
 import { FiInstagram } from "react-icons/fi";
@@ -14,7 +13,7 @@ export default function Home() {
       <main>
         <section id="home" className="hero h-screen bg-slate-200 pt-40 border-b-2 border-sand bg-hero-mobile bg-no-repeat bg-cover bg-fixed bg-[80%] md:bg-hero-tablet md:bg-[80%] md:max-h-[662px] lg:bg-[100%] xl:bg-hero-desktop">
           <div className="container">
-            <p className="uppercase text-sand tracking-[.25em] mb-2 lg:text-lg">Psicóloga CRP: 12/12345</p>
+            <p className="uppercase text-sand tracking-[.25em] mb-2 lg:text-lg">Psicóloga CRP: 06/18333</p>
             <h1>Carol Godoy</h1>
             <p className="text-dark mt-10 mb-16 max-w-96 md:mt-6 md:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit.</p>
             <NextLink href={WPP_LINK} className="button">Entre em contato</NextLink>
@@ -23,14 +22,16 @@ export default function Home() {
 
         <section className="md:p-0">
           <div className="container">
-            <div className="flex flex-col border border-sand relative md:-top-20 md:flex-row">
-              <Image src="" alt="Foto da Carol Godoy" className="w-full min-h-[360px] border-b border-sand bg-slate-300 md:border-0 md:border-r md:w-2/5" />
+            <div className="relative md:-top-20 flex flex-col items-center gap-6 md:flex-row md:items-start">
+              <div className="w-full md:w-1/3">
+                <PhotoCarousel />
+              </div>
 
-              <div className="p-6 bg-white/40 backdrop-blur-xl lg:text-lg md:w-3/5">
+              <div className="p-6 bg-white/40 backdrop-blur-xl border border-sand lg:text-lg">
                 <h3 className="mb-6">Sobre mim</h3>
-                <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
-                <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
+                <p className="mb-4">Bacharel em psicologia, desenvolvo pessoas há mais de sete anos. Minha experiência clínica é pautada nas bases da Análise Existencial e Logoterapia de Viktor Frankl, que se configura pela busca de sentido.</p>
+                <p className="mb-4">O passado condiciona, mas não determina: é nessa premissa que construo minha caminhada profissional, afinal, sem acreditar que o ser humano tem o poder de reinventar e ressignificar, nenhuma psicoterapia seria justificada. </p>
+                <p>Somos seres coletivos, mas o sofrimento psíquico é vivenciado de maneira única para cada um, portanto, ainda que levando em conta as influências culturais e históricas, meu olhar é voltado para cada história de vida, para além de diagnósticos e rótulos. Desta forma, conduzo meus atendimentos com escuta especializada e cuidadosa, em um espaço de acolhimento seguro, pautado nas normas do sigilo e confidencialidade.</p>
               </div>
             </div>
           </div>
@@ -41,8 +42,7 @@ export default function Home() {
             <h2 className="text-center mb-14">A importância da psicoterapia</h2>
 
             <div className="p-6 bg-white border border-sand lg:text-lg">
-              <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
+              <p>Para muito além do tabu, a psicoterapia tem sido evidenciada como fator referência para garantir maior qualidade de vida e para promover saúde - não somente mental, mas também fisiológica, já que hoje sabemos da influência do estado emocional também no nosso corpo (doenças psicossomáticas).</p>
             </div>
           </div>
         </section>
@@ -52,8 +52,7 @@ export default function Home() {
             <h2 className="text-center mb-14">Quando fazer terapia?</h2>
 
             <div className="p-6 bg-white border border-sand lg:text-lg">
-              <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit metus scelerisque.</p>
+              <p>O sofrimento psíquico, seja lá qual motivador tenha, é o motivo que mais leva as pessoas a refletirem sobre a necessidade da psicoterapia, entretanto, ele está longe de ser o único. Os motivos podem estar relacionados ao desejo pela busca do autoconhecimento, promover saúde e bem-estar num geral ou até mesmo um “ultimato” de amigos e familiares para que essa pessoa procure ajuda profissional - e são todos legítimos.</p>
             </div>
           </div>
         </section>
