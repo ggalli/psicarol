@@ -3,7 +3,7 @@ import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger, P
 import { MdDevices, MdMailOutline, MdWhatsapp } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
 import { FiInstagram } from "react-icons/fi";
-import { INSTAGRAM_LINK, WPP_LINK } from "./utils";
+import { INSTAGRAM_LINK, WPP_LINK, QUESTIONS, STEPS, TOPICS } from "./utils";
 
 export default function Home() {
   return (
@@ -13,10 +13,14 @@ export default function Home() {
       <main>
         <section id="home" className="hero h-screen bg-slate-200 pt-40 border-b-2 border-sand bg-hero-mobile bg-no-repeat bg-cover bg-fixed bg-[80%] md:bg-hero-tablet md:bg-[80%] md:max-h-[662px] lg:bg-[100%] xl:bg-hero-desktop">
           <div className="container">
-            <p className="uppercase text-sand tracking-[.25em] mb-2 lg:text-lg">Psicóloga CRP: 06/18333</p>
-            <h1>Carol Godoy</h1>
-            <p className="text-dark mt-10 mb-16 max-w-96 md:mt-6 md:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus iaculis, ut hendrerit.</p>
-            <NextLink href={WPP_LINK} className="button">Entre em contato</NextLink>
+            <p className="flex flex-col uppercase text-sand tracking-[.25em] mb-2 lg:text-lg lg:flex-row lg:gap-2">
+              <span>Carol Godoy</span>
+              <span className='hidden lg:inline'>-</span>
+              <span>Psicóloga CRP: 06/18333</span>
+            </p>
+            <h1 className='md:w-4/5'>O passado te condiciona, <br /> mas não te determina</h1>
+            <p className="text-dark mt-10 mb-16 max-w-96 md:mt-6 md:mb-10">O passado te condiciona, mas não te determina.<br />Ajudando a promover qualidade de vida há 7 anos.</p>
+            <NextLink href={WPP_LINK} target='_blank' className="btn">Entre em contato</NextLink>
           </div>
         </section>
 
@@ -29,9 +33,9 @@ export default function Home() {
 
               <div className="p-6 bg-white/40 backdrop-blur-xl border border-sand lg:text-lg">
                 <h3 className="mb-6">Sobre mim</h3>
-                <p className="mb-4">Bacharel em psicologia, desenvolvo pessoas há mais de sete anos. Minha experiência clínica é pautada nas bases da Análise Existencial e Logoterapia de Viktor Frankl, que se configura pela busca de sentido.</p>
-                <p className="mb-4">O passado condiciona, mas não determina: é nessa premissa que construo minha caminhada profissional, afinal, sem acreditar que o ser humano tem o poder de reinventar e ressignificar, nenhuma psicoterapia seria justificada. </p>
-                <p>Somos seres coletivos, mas o sofrimento psíquico é vivenciado de maneira única para cada um, portanto, ainda que levando em conta as influências culturais e históricas, meu olhar é voltado para cada história de vida, para além de diagnósticos e rótulos. Desta forma, conduzo meus atendimentos com escuta especializada e cuidadosa, em um espaço de acolhimento seguro, pautado nas normas do sigilo e confidencialidade.</p>
+                <p className="mb-4">Sou bacharel em psicologia e ajudo a desenvolver pessoas há sete anos. Minha experiência clínica é pautada nas bases da Análise Existencial e Logoterapia de Viktor Frankl, que se configura pela busca de sentido.</p>
+                <p className="mb-4">O passado nos condiciona, mas não nos determina: é a partir dessa premissa que construo  minha caminhada profissional, afinal, sem acreditar que o ser humano tem o poder de reinventar e ressignificar, nenhuma psicoterapia seria justificada.</p>
+                <p>Nós somos seres coletivos, mas o sofrimento psíquico é vivenciado de maneira única para cada um, portanto, ainda que levando em conta as influências culturais, históricas e externas, aqui o olhar é voltado para cada história de vida, para além somente dos diagnósticos e rótulos. É sob a luz dessa ótica, que conduzo meus atendimentos, com escuta especializada e cuidadosa, em um espaço de acolhimento seguro, pautado nas normas do sigilo e confidencialidade.</p>
               </div>
             </div>
           </div>
@@ -39,10 +43,10 @@ export default function Home() {
 
         <section className="pt-0 lg:pt-14">
           <div className="container">
-            <h2 className="text-center mb-14">A importância da psicoterapia</h2>
+            <h2 className="text-center mb-14">Por que fazer terapia?</h2>
 
             <div className="p-6 bg-white border border-sand lg:text-lg">
-              <p>Para muito além do tabu, a psicoterapia tem sido evidenciada como fator referência para garantir maior qualidade de vida e para promover saúde - não somente mental, mas também fisiológica, já que hoje sabemos da influência do estado emocional também no nosso corpo (doenças psicossomáticas).</p>
+              <p>Para muito além do tabu, a psicoterapia tem sido evidenciada como fator referência para garantir maior qualidade de vida e para promover saúde. Ela nos ajuda a lidar com traumas, conflitos e situações difíceis em geral, além de promover autoconhecimento e desenvolver a nossa inteligência emocional.</p>
             </div>
           </div>
         </section>
@@ -52,7 +56,7 @@ export default function Home() {
             <h2 className="text-center mb-14">Quando fazer terapia?</h2>
 
             <div className="p-6 bg-white border border-sand lg:text-lg">
-              <p>O sofrimento psíquico, seja lá qual motivador tenha, é o motivo que mais leva as pessoas a refletirem sobre a necessidade da psicoterapia, entretanto, ele está longe de ser o único. Os motivos podem estar relacionados ao desejo pela busca do autoconhecimento, promover saúde e bem-estar num geral ou até mesmo um “ultimato” de amigos e familiares para que essa pessoa procure ajuda profissional - e são todos legítimos.</p>
+              <p>O sofrimento emocional, em suas diversas manifestações, é o motivo que mais leva as pessoas a refletirem sobre a necessidade da psicoterapia, entretanto, ele não é o único. Os motivos podem estar relacionados à busca pelo autoconhecimento, promoção da inteligência emocional, da saúde e do bem-estar em geral, ou até mesmo a um “ultimato” de amigos e familiares para que essa pessoa procure ajuda profissional - e são todos legítimos.</p>
             </div>
           </div>
         </section>
@@ -62,17 +66,16 @@ export default function Home() {
             <h2 className="text-center mb-14">Temas abordados</h2>
 
             <div className="flex flex-wrap justify-center lg:justify-between gap-8">
-              {Array.from(Array(6)).map((i, j) => (
-                <div key={j} className="p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light md:max-w-72 justify-self-center">
-                  <p className="text-lg font-bold mb-4">Lorem ipsum dolor sit amet</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus.</p>
+              {TOPICS.map((topic) => (
+                <div key={topic} className="flex justify-center items-center p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-28 justify-self-center">
+                  <p className="text-xl lg:text-2xl font-bold text-center" dangerouslySetInnerHTML={{ __html: topic }} />
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="modalidades" className="pb-0">
+        <section id="modalidades">
           <div className="container">
             <h2 className="text-center mb-14">Modalidades de atendimento</h2>
 
@@ -84,11 +87,10 @@ export default function Home() {
               <div className="md:w-3/5">
                 <div className="p-6">
                   <p className="text-xl font-bold mb-4">Online</p>
-                  <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus.</p>
+                  <p className="mb-4">O formato online dos atendimentos oferece a liberdade geográfica necessária para que o paciente consiga dar continuidade ao acompanhamento psicológico independente de onde estiver, seja por motivo de viagens, mudança de endereço ou outros. Isso garante uma consistência essencial na frequência dos atendimentos, além de poupar tempo e dinheiro gastos na locomoção até um consultório físico.</p>
                 </div>
 
-                <NextLink href={WPP_LINK} className="block uppercase text-sand text-lg text-center tracking-widest p-4 border-t border-sand cursor-pointer hover:bg-sand/10 transition">
+                <NextLink href={WPP_LINK} target='_blank' className="block uppercase text-sand text-lg text-center tracking-widest p-4 border-t border-sand cursor-pointer hover:bg-sand/10 transition">
                   Entre em contato
                 </NextLink>
               </div>
@@ -96,18 +98,38 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="como-comecar" className="bg-green border-y-2 border-sand bg-green-plants-mobile bg-no-repeat bg-cover bg-right bg-fixed md:bg-green-plants-tablet md:bg-left lg:bg-green-plants-desktop">
+          <div className="container">
+            <h2 className="text-center mb-14">Como começar</h2>
+
+            <div className="flex flex-col items-center lg:flex-row">
+              {STEPS.map(({ title, text }, index) => (
+                <>
+                  <div className="relative p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
+                    <p className="text-lg font-bold mb-4">{title}</p>
+                    <p>{text}</p>
+                    <span className='absolute bottom-0 right-2 text-[10rem] leading-none text-sand opacity-30'>{index + 1}</span>
+                  </div>
+
+                  {index < 2 && (<div className="w-[2px] h-20 bg-light/40 lg:h-[2px] lg:w-auto lg:flex-1"></div>)}
+                </>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="duvidas">
           <div className="container">
-            <h2 className="text-center mb-14">Dúvidas frequentes</h2>
+            <h2 className="text-center mb-14">Perguntas frequentes</h2>
 
-            {Array.from(Array(5)).map((i, j) => (
-              <Accordion type="single" collapsible key={j}>
+            {QUESTIONS.map(({ title, text }) => (
+              <Accordion type="single" collapsible key={title}>
                 <AccordionItem value="item-1">
                   <AccordionTrigger>
-                    Lorem ipsum dolor sit amet
+                    {title}
                   </AccordionTrigger>
                   <AccordionContent>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet sem et metus.
+                    {text}
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

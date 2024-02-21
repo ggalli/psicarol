@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn {
+    @apply inline-block py-4 px-8 border border-dark text-dark uppercase tracking-widest bg-white/20 backdrop-blur-md cursor-pointer transition hover:bg-dark/5
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -38,24 +44,6 @@ h3 {
 
 section {
   padding: 56px 0;
-}
-
-.button {
-  all: unset;
-  display: inline-block;
-  padding: 16px 32px;
-  border: 1px solid #433F3E;
-  color: #433F3E;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  background: rgba(255, 255, 255, .2);
-  backdrop-filter: blur(10px);
-  cursor: pointer;
-  transition: 150ms;
-}
-
-.button:hover {
-  background: rgba(67, 63, 62, 0.05)
 }
 
 .burger {
@@ -103,7 +91,7 @@ section {
 
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   h2 {
@@ -120,10 +108,6 @@ section {
 }
 
 @media screen and (min-width: 1280px) {
-  h1 {
-    font-size: 5rem;
-  }
-
   h2 {
     font-size: 3rem;
   }
