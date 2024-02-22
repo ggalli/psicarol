@@ -1,5 +1,5 @@
 import NextLink from 'next/link';
-import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger, PhotoCarousel } from "./components";
+import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger, PhotoCarousel, Logo } from "./components";
 import { MdDevices, MdMailOutline, MdWhatsapp } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
 import { FiInstagram } from "react-icons/fi";
@@ -19,7 +19,7 @@ export default function Home() {
               <span>Psicóloga CRP: 06/18333</span>
             </p>
             <h1 className='md:w-4/5'>O passado te condiciona, <br /> mas não te determina</h1>
-            <p className="text-dark mt-10 mb-16 max-w-96 md:mt-6 md:mb-10">O passado te condiciona, mas não te determina.<br />Ajudando a promover qualidade de vida há 7 anos.</p>
+            <p className="text-dark mt-10 mb-16 max-w-96 md:mt-6 md:mb-10">Ajudando a promover qualidade de vida há 7 anos.</p>
             <NextLink href={WPP_LINK} target='_blank' className="btn">Entre em contato</NextLink>
           </div>
         </section>
@@ -103,28 +103,38 @@ export default function Home() {
             <h2 className="text-center mb-14">Como começar</h2>
 
             <div className="flex flex-col items-center lg:flex-row">
-              {STEPS.map(({ title, text }, index) => (
-                <>
-                  <div className="relative p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
-                    <p className="text-lg font-bold mb-4">{title}</p>
-                    <p>{text}</p>
-                    <span className='absolute bottom-0 right-2 text-[10rem] leading-none text-sand opacity-30'>{index + 1}</span>
-                  </div>
+              <div className="relative p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
+                <p className="text-lg font-bold mb-4">Entrar em contato</p>
+                <p>Entre em contato via Whatsapp, ou <NextLink href={WPP_LINK} target='_blank' className='underline'>clique aqui</NextLink>.</p>
+                <span className='absolute bottom-0 right-2 text-[10rem] leading-none text-sand opacity-30'>1</span>
+              </div>
 
-                  {index < 2 && (<div className="w-[2px] h-20 bg-light/40 lg:h-[2px] lg:w-auto lg:flex-1"></div>)}
-                </>
-              ))}
+              <div className="w-[2px] h-20 bg-light/40 lg:h-[2px] lg:w-auto lg:flex-1"></div>
+
+              <div className="relative p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
+                <p className="text-lg font-bold mb-4">Agendar a sessão de apresentação</p>
+                <p>A sessão é gratuita e tem duração média de 30 minutos, servindo para contato inicial e possíveis dúvidas.</p>
+                <span className='absolute bottom-0 right-2 text-[10rem] leading-none text-sand opacity-30'>2</span>
+              </div>
+
+              <div className="w-[2px] h-20 bg-light/40 lg:h-[2px] lg:w-auto lg:flex-1"></div>
+
+              <div className="relative p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
+                <p className="text-lg font-bold mb-4">Iniciar o acompanhamento</p>
+                <p>Se após a apresentação você desejar iniciar o acompanhamento, será feito o agendamento conforme disponibilidade.</p>
+                <span className='absolute bottom-0 right-2 text-[10rem] leading-none text-sand opacity-30'>3</span>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="duvidas">
           <div className="container">
-            <h2 className="text-center mb-14">Perguntas frequentes</h2>
+            <h2 className="text-center mb-14">Dúvidas frequentes</h2>
 
-            {QUESTIONS.map(({ title, text }) => (
+            {QUESTIONS.map(({ title, text }, index) => (
               <Accordion type="single" collapsible key={title}>
-                <AccordionItem value="item-1">
+                <AccordionItem value={`item-${index}`}>
                   <AccordionTrigger>
                     {title}
                   </AccordionTrigger>
@@ -140,7 +150,9 @@ export default function Home() {
         <footer className="bg-green text-beige pt-14 pb-2 border-t-2 border-sand">
           <div className="container">
             <div className="flex flex-col gap-10 md:flex-row md:justify-between">
-              <div className="w-32 h-32 bg-slate-300 border border-sand"></div>
+              <div className='border border-beige/40 p-3 w-fit h-fit'>
+                <Logo width={120} />
+              </div>
 
               <div className="flex flex-col gap-4">
                 <div className="flex gap-4">
