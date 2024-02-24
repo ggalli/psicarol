@@ -1,9 +1,11 @@
 import NextLink from 'next/link';
+import Image from "next/image";
 import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger, PhotoCarousel, Logo } from "./components";
 import { MdDevices, MdMailOutline, MdWhatsapp } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
 import { FiInstagram } from "react-icons/fi";
-import { INSTAGRAM_LINK, WPP_LINK, QUESTIONS, STEPS, TOPICS } from "./utils";
+import { INSTAGRAM_LINK, WPP_LINK, QUESTIONS, TOPICS } from "./utils";
+import carolImg from '../../public/images/carol-3.jpg'
 
 export default function Home() {
   return (
@@ -19,17 +21,18 @@ export default function Home() {
               <span>Psicóloga CRP: 06/18333</span>
             </p>
             <h1 className='md:w-4/5'>O passado te condiciona, <br /> mas não te determina</h1>
-            <p className="text-dark mt-10 mb-16 max-w-96 md:mt-6 md:mb-10">Ajudando a promover qualidade de vida há 7 anos.</p>
+            <p className="text-dark text-lg mt-4 mb-16 max-w-64 md:max-w-full md:mt-6 md:mb-10">Ajudando a promover qualidade de vida há 7 anos.</p>
             <NextLink href={WPP_LINK} target='_blank' className="btn">Entre em contato</NextLink>
           </div>
         </section>
 
         <section className="md:p-0">
           <div className="container">
-            <div className="relative md:-top-20 flex flex-col items-center gap-6 md:flex-row md:items-start">
-              <div className="w-full md:w-1/3">
+            <div className="relative md:-top-20 flex flex-col items-center md:flex-row md:items-start">
+              <Image src={carolImg} alt='' className='md:max-w-[340px] border border-sand' quality={100} />
+              {/* <div className="w-full md:w-2/5 lg:1/3">
                 <PhotoCarousel />
-              </div>
+              </div> */}
 
               <div className="p-6 bg-white/40 backdrop-blur-xl border border-sand lg:text-lg">
                 <h3 className="mb-6">Sobre mim</h3>
@@ -68,7 +71,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center lg:justify-between gap-8">
               {TOPICS.map((topic) => (
                 <div key={topic} className="flex justify-center items-center p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-28 justify-self-center">
-                  <p className="text-xl lg:text-2xl font-bold text-center" dangerouslySetInnerHTML={{ __html: topic }} />
+                  <p className="text-xl lg:text-2xl text-center" dangerouslySetInnerHTML={{ __html: topic }} />
                 </div>
               ))}
             </div>
@@ -77,7 +80,7 @@ export default function Home() {
 
         <section id="modalidades">
           <div className="container">
-            <h2 className="text-center mb-14">Modalidades de atendimento</h2>
+            <h2 className="text-center mb-14">Atendimento online</h2>
 
             <div className="flex flex-col border border-sand bg-white text-dark md:flex-row">
               <div className="flex justify-center items-center min-h-52 border-b border-sand md:border-0 md:border-r md:w-2/5">
@@ -86,7 +89,6 @@ export default function Home() {
 
               <div className="md:w-3/5">
                 <div className="p-6">
-                  <p className="text-xl font-bold mb-4">Online</p>
                   <p className="mb-4">O formato online dos atendimentos oferece a liberdade geográfica necessária para que o paciente consiga dar continuidade ao acompanhamento psicológico independente de onde estiver, seja por motivo de viagens, mudança de endereço ou outros. Isso garante uma consistência essencial na frequência dos atendimentos, além de poupar tempo e dinheiro gastos na locomoção até um consultório físico.</p>
                 </div>
 
@@ -100,7 +102,7 @@ export default function Home() {
 
         <section id="como-comecar" className="bg-green border-y-2 border-sand bg-green-plants-mobile bg-no-repeat bg-cover bg-right bg-fixed md:bg-green-plants-tablet md:bg-left lg:bg-green-plants-desktop">
           <div className="container">
-            <h2 className="text-center mb-14">Como começar</h2>
+            <h2 className="text-center mb-14">Como começar?</h2>
 
             <div className="flex flex-col items-center lg:flex-row">
               <div className="relative p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
@@ -177,7 +179,7 @@ export default function Home() {
             <div className="h-px w-full bg-beige mb-4 mt-10"></div>
 
             <div className="flex flex-col text-sm text-center md:flex-row md:justify-between">
-              <p>Todos os direitos reservados.</p>
+              <p>&copy; Todos os direitos reservados.</p>
               <p>Desenvolvido por Guilherme Galli</p>
             </div>
           </div>
