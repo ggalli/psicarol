@@ -18,7 +18,7 @@ export function PhotoCarousel() {
       centered-slides="true"
       autoplay-delay="3000"
       effect="fade"
-      class="border border-sand"
+      class="border border-sand max-w-[340px]"
     >
       <swiper-slide>
         <Image src={CarolImg} alt='' className='max-w-[340px]' quality={100} />
