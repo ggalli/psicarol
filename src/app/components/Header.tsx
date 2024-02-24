@@ -11,7 +11,7 @@ import { Logo } from "./Logo";
 const Link = ({ children, ...props }: PropsWithChildren<LinkProps>) => {
   return (
     <li>
-      <NextLink className="text-3xl text-sand lg:text-base hover:border-b border-sand" {...props}>{children}</NextLink>
+      <NextLink className="text-2xl md:text-3xl text-sand lg:text-base hover:border-b border-sand" {...props}>{children}</NextLink>
     </li>
   )
 }
@@ -52,11 +52,12 @@ export function Header() {
             !isOpen && 'translate-x-full',
             'lg:relative lg:h-auto lg:bg-transparent lg:flex-row lg:p-0 lg:translate-x-0'
           )}>
-            <ul className="text-center flex flex-col gap-8 lg:flex-row lg:flex-1 lg:justify-center lg:gap-16">
-              <Link href='#home'>Início</Link>
-              <Link href='#temas'>Temas</Link>
-              <Link href='#modalidades'>Modalidades</Link>
-              <Link href='#duvidas'>Dúvidas</Link>
+            <ul className="text-center flex flex-col gap-8 lg:flex-row lg:flex-1 lg:justify-center lg:items-center lg:gap-16">
+              <Link href='#home' onClick={toggleMenu}>Início</Link>
+              <Link href='#temas' onClick={toggleMenu}>Temas abordados</Link>
+              <Link href='#modalidades' onClick={toggleMenu}>Atendimento online</Link>
+              <Link href='#como-comecar' onClick={toggleMenu}>Como começar?</Link>
+              <Link href='#duvidas' onClick={toggleMenu}>Dúvidas</Link>
             </ul>
 
             <div className="flex text-sand mt-6 lg:mt-0 lg:gap-2">
