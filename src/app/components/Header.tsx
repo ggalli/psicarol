@@ -42,7 +42,9 @@ export function Header() {
     <header className={twMerge("fixed w-full top-0 z-50 transition-all", hasScrolled ? "backdrop-blur-md bg-white/20 shadow-lg" : "bg-transparent")}>
       <div className="container">
         <nav className="flex justify-between items-center py-4">
-          <Logo width={60} className="text-sand" />
+          <NextLink href='#home' onClick={toggleMenu}>
+            <Logo width={60} className="text-sand" />
+          </NextLink>
 
           <button className={twMerge("burger", isOpen && 'open', 'lg:hidden')} onClick={toggleMenu}></button>
 
@@ -53,7 +55,6 @@ export function Header() {
             'lg:relative lg:h-auto lg:bg-transparent lg:flex-row lg:p-0 lg:translate-x-0'
           )}>
             <ul className="text-center flex flex-col gap-8 lg:flex-row lg:flex-1 lg:justify-center lg:items-center lg:gap-16">
-              <Link href='#home' onClick={toggleMenu}>Início</Link>
               <Link href='#temas' onClick={toggleMenu}>Temas abordados</Link>
               <Link href='#modalidades' onClick={toggleMenu}>Atendimento online</Link>
               <Link href='#como-comecar' onClick={toggleMenu}>Como começar?</Link>
