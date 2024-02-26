@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <section id="home" className="hero h-screen bg-slate-200 pt-40 border-b-2 border-sand bg-hero-mobile bg-no-repeat bg-cover bg-fixed bg-[80%] md:bg-hero-tablet md:bg-[80%] md:max-h-[662px] lg:bg-[100%] xl:bg-hero-desktop">
+        <section id="home" className="hero h-screen bg-slate-200 pt-40 border-b-2 border-sand bg-hero-mobile bg-no-repeat bg-cover bg-[80%] md:bg-hero-tablet md:bg-[80%] md:max-h-[662px] lg:bg-[100%] xl:bg-hero-desktop">
           <div className="container">
             <p className="flex flex-col uppercase text-sand tracking-[.25em] mb-2 lg:text-lg lg:flex-row lg:gap-2">
               <span>Carol Godoy</span>
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="temas" className="bg-green border-y-2 border-sand bg-green-plants-mobile bg-no-repeat bg-cover bg-right bg-fixed md:bg-green-plants-tablet md:bg-left lg:bg-green-plants-desktop">
+        <section id="temas" className="bg-green border-y-2 border-sand bg-green-plants-mobile bg-no-repeat bg-cover bg-right md:bg-green-plants-tablet md:bg-left lg:bg-green-plants-desktop">
           <div className="container">
             <h2 className="text-center mb-14">Temas abordados</h2>
 
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="como-comecar" className="bg-green border-y-2 border-sand bg-green-plants-mobile bg-no-repeat bg-cover bg-right bg-fixed md:bg-green-plants-tablet md:bg-left lg:bg-green-plants-desktop">
+        <section id="como-comecar" className="bg-green border-y-2 border-sand bg-green-plants-mobile bg-no-repeat bg-cover bg-right md:bg-green-plants-tablet md:bg-left lg:bg-green-plants-desktop">
           <div className="container">
             <h2 className="text-center mb-14">Como começar?</h2>
 
@@ -132,7 +132,7 @@ export default function Home() {
 
         <section id="duvidas">
           <div className="container">
-            <h2 className="text-center mb-14">Dúvidas frequentes</h2>
+            <h2 className="text-center mb-14">Dúvidas frequêntes</h2>
 
             {QUESTIONS.map(({ title, text }, index) => (
               <Accordion type="single" collapsible key={title}>
