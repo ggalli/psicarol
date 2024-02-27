@@ -20,8 +20,12 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  function toggleMenu() {
-    setIsOpen(!isOpen);
+  function openMenu() {
+    setIsOpen(true);
+  }
+
+  function closeMenu() {
+    setIsOpen(false);
   }
 
   function handleScroll() {
@@ -42,11 +46,11 @@ export function Header() {
     <header className={twMerge("fixed w-full top-0 z-50 transition-all", hasScrolled ? "backdrop-blur-md bg-white/20 shadow-lg" : "bg-transparent")}>
       <div className="container">
         <nav className="flex justify-between items-center py-4">
-          <NextLink href='#home' onClick={toggleMenu}>
+          <NextLink href='#home'>
             <Logo width={60} className="text-sand" />
           </NextLink>
 
-          <button className={twMerge("burger", isOpen && 'open', 'lg:hidden')} onClick={toggleMenu}></button>
+          <button className={twMerge("burger", isOpen && 'open', 'lg:hidden')} onClick={openMenu}></button>
 
           <div className={twMerge(
             "absolute top-0 left-0 w-full h-screen bg-white z-50 translate-x-0",
@@ -55,10 +59,10 @@ export function Header() {
             'lg:relative lg:h-auto lg:bg-transparent lg:flex-row lg:p-0 lg:translate-x-0'
           )}>
             <ul className="text-center flex flex-col gap-8 lg:flex-row lg:flex-1 lg:justify-center lg:items-center lg:gap-16">
-              <Link href='#temas' onClick={toggleMenu}>Temas abordados</Link>
-              <Link href='#modalidades' onClick={toggleMenu}>Atendimento online</Link>
-              <Link href='#como-comecar' onClick={toggleMenu}>Como começar?</Link>
-              <Link href='#duvidas' onClick={toggleMenu}>Dúvidas</Link>
+              <Link href='#temas' onClick={closeMenu}>Temas abordados</Link>
+              <Link href='#modalidades' onClick={closeMenu}>Atendimento online</Link>
+              <Link href='#como-comecar' onClick={closeMenu}>Como começar?</Link>
+              <Link href='#duvidas' onClick={closeMenu}>Dúvidas</Link>
             </ul>
 
             <div className="flex text-sand mt-6 lg:mt-0 lg:gap-2">
