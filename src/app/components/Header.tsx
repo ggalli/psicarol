@@ -1,17 +1,17 @@
 'use client'
 
-import { PropsWithChildren, useEffect, useState } from "react"
-import NextLink, { LinkProps } from 'next/link';
+import { ComponentProps, PropsWithChildren, useEffect, useState } from "react"
+import NextLink from 'next/link';
 import { twMerge } from "tailwind-merge"
 import { MdWhatsapp } from "react-icons/md"
 import { FiInstagram } from "react-icons/fi";
 import { INSTAGRAM_LINK, WPP_LINK } from "../utils";
 import { Logo } from "./Logo";
 
-const Link = ({ children, ...props }: PropsWithChildren<LinkProps>) => {
+const Link = ({ children, ...props }: PropsWithChildren<ComponentProps<'a'>>) => {
   return (
     <li>
-      <NextLink className="text-2xl md:text-3xl text-sand lg:text-base hover:border-b border-sand" {...props}>{children}</NextLink>
+      <a className="text-2xl md:text-3xl text-sand lg:text-base hover:border-b border-sand" {...props}>{children}</a>
     </li>
   )
 }
@@ -42,9 +42,9 @@ export function Header() {
     <header className={twMerge("fixed w-full top-0 z-50 transition-all", hasScrolled ? "backdrop-blur-md bg-white/20 shadow-lg" : "bg-transparent")}>
       <div className="container">
         <nav className="flex justify-between items-center py-4">
-          <NextLink href='#home'>
+          <a href='#home'>
             <Logo width={60} className="text-sand" />
-          </NextLink>
+          </a>
 
           <button className={twMerge("burger", isOpen && 'open', 'lg:hidden')} onClick={toogleMenu}></button>
 
