@@ -20,12 +20,8 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  function openMenu() {
-    setIsOpen(true);
-  }
-
-  function closeMenu() {
-    setIsOpen(false);
+  function toogleMenu() {
+    setIsOpen(!isOpen);
   }
 
   function handleScroll() {
@@ -50,7 +46,7 @@ export function Header() {
             <Logo width={60} className="text-sand" />
           </NextLink>
 
-          <button className={twMerge("burger", isOpen && 'open', 'lg:hidden')} onClick={openMenu}></button>
+          <button className={twMerge("burger", isOpen && 'open', 'lg:hidden')} onClick={toogleMenu}></button>
 
           <div className={twMerge(
             "absolute top-0 left-0 w-full h-screen bg-white z-50 translate-x-0",
@@ -59,10 +55,10 @@ export function Header() {
             'lg:relative lg:h-auto lg:bg-transparent lg:flex-row lg:p-0 lg:translate-x-0'
           )}>
             <ul className="text-center flex flex-col gap-8 lg:flex-row lg:flex-1 lg:justify-center lg:items-center lg:gap-16">
-              <Link href='#temas' onClick={closeMenu}>Temas abordados</Link>
-              <Link href='#modalidades' onClick={closeMenu}>Atendimento online</Link>
-              <Link href='#como-comecar' onClick={closeMenu}>Como começar?</Link>
-              <Link href='#duvidas' onClick={closeMenu}>Dúvidas</Link>
+              <Link href='#temas' onClick={toogleMenu}>Temas abordados</Link>
+              <Link href='#modalidades' onClick={toogleMenu}>Atendimento online</Link>
+              <Link href='#como-comecar' onClick={toogleMenu}>Como começar?</Link>
+              <Link href='#duvidas' onClick={toogleMenu}>Dúvidas</Link>
             </ul>
 
             <div className="flex text-sand mt-6 lg:mt-0 lg:gap-2">
