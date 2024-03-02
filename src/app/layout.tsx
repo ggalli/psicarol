@@ -1,8 +1,9 @@
-import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
 import localFont from 'next/font/local'
-import './globals.css'
+import { Roboto } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
+import { GoogleTagManager } from '@next/third-parties/google'
+import type { Metadata } from 'next'
+import './globals.css'
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-roboto' })
 
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={twMerge(theSeasons.variable, roboto.variable)}>
       <body className={roboto.className}>{children}</body>
+      <GoogleTagManager gtmId="GTM-KMZMVLTK" />
     </html>
   )
 }
