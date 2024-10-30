@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply inline-block py-4 px-8 border border-dark text-dark uppercase tracking-widest bg-white/20 backdrop-blur-md cursor-pointer transition hover:bg-dark/5
+    @apply inline-block py-4 px-8 border border-dark text-dark uppercase tracking-widest bg-white/10 backdrop-blur-md cursor-pointer transition hover:bg-dark/5
   }
 }
 
