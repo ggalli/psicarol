@@ -42,11 +42,11 @@ export function Header() {
     <header className={twMerge("fixed w-full top-0 z-50 transition-all", hasScrolled ? "backdrop-blur-md bg-white/20 shadow-lg" : "bg-transparent")}>
       <div className="container">
         <nav className="flex justify-between items-center py-4">
-          <a href='#home'>
+          <a href='#home' aria-label="Ir para a o topo da página">
             <Logo width={60} className="text-sand" />
           </a>
 
-          <button className={twMerge("burger", isOpen && 'open', 'lg:hidden')} onClick={toogleMenu}></button>
+          <button className={twMerge("burger", isOpen && 'open', 'lg:hidden')} onClick={toogleMenu} aria-label="Menu" />
 
           <div className={twMerge(
             "absolute top-0 left-0 w-full h-screen bg-white z-50 translate-x-0",
@@ -62,7 +62,7 @@ export function Header() {
             </ul>
 
             <div className="flex text-sand mt-6 lg:mt-0 lg:gap-2">
-              <NextLink href={WPP_LINK} target="_blank" className="p-2 lg:p-1">
+              <NextLink href={WPP_LINK} target="_blank" className="p-2 lg:p-1" aria-label='Entre em contato via WhatsApp'>
                 <MdWhatsapp size={28} />
               </NextLink>
               <NextLink href={INSTAGRAM_LINK} target="_blank" className="p-2 lg:p-1">

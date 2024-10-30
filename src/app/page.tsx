@@ -22,20 +22,20 @@ export default function Home() {
             </p>
             <h1 className='md:w-4/5'>O passado te condiciona, <br /> mas não te determina</h1>
             <p className="text-dark text-lg mt-4 mb-16 max-w-64 md:max-w-full md:mt-6 md:mb-10">Ajudando a promover qualidade de vida há 7 anos.</p>
-            <NextLink href={WPP_LINK} target='_blank' className="btn">Entre em contato</NextLink>
+            <NextLink href={WPP_LINK} target='_blank' className="btn" aria-label='Entre em contato via WhatsApp'>Entre em contato</NextLink>
           </div>
         </section>
 
         <section className="md:p-0">
           <div className="container">
             <div className="relative md:-top-20 flex flex-col items-center md:flex-row md:items-start">
-              <Image src={carolImg} alt='' className='md:max-w-[340px] border border-sand' quality={100} />
+              <Image src={carolImg} alt='Foto da psicóloga Carol Godoy sentada em uma cadeira com uma estante com livros atrás' className='md:max-w-[340px] border border-sand' quality={90} priority />
               {/* <div className="w-full md:w-2/5 lg:1/3">
                 <PhotoCarousel />
               </div> */}
 
               <div className="p-6 bg-white/40 backdrop-blur-xl border border-sand lg:text-lg">
-                <h3 className="mb-6">Sobre mim</h3>
+                <h2 className="mb-6 text-4xl">Sobre mim</h2>
                 <p className="mb-4">Sou bacharel em psicologia e ajudo a desenvolver pessoas há sete anos. Minha experiência clínica é pautada nas bases da Análise Existencial e Logoterapia de Viktor Frankl, que se configura pela busca de sentido.</p>
                 <p className="mb-4">O passado nos condiciona, mas não nos determina: é a partir dessa premissa que construo  minha caminhada profissional, afinal, sem acreditar que o ser humano tem o poder de reinventar e ressignificar, nenhuma psicoterapia seria justificada.</p>
                 <p>Nós somos seres coletivos, mas o sofrimento psíquico é vivenciado de maneira única para cada um, portanto, ainda que levando em conta as influências culturais, históricas e externas, aqui o olhar é voltado para cada história de vida, para além somente dos diagnósticos e rótulos. É sob a luz dessa ótica, que conduzo meus atendimentos, com escuta especializada e cuidadosa, em um espaço de acolhimento seguro, pautado nas normas do sigilo e confidencialidade.</p>
@@ -70,7 +70,7 @@ export default function Home() {
 
             <div className="flex flex-wrap justify-center lg:justify-between gap-8">
               {TOPICS.map((topic) => (
-                <div key={topic} className="flex justify-center items-center p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-28 justify-self-center">
+                <div key={topic} className="flex justify-center items-center p-6 border border-light/40 bg-white/10 backdrop-blur-lg text-light w-full md:w-72 h-28 justify-self-center">
                   <p className="text-xl lg:text-2xl text-center" dangerouslySetInnerHTML={{ __html: topic }} />
                 </div>
               ))}
@@ -92,7 +92,7 @@ export default function Home() {
                   <p className="mb-4">O formato online dos atendimentos oferece a liberdade geográfica necessária para que o paciente consiga dar continuidade ao acompanhamento psicológico independente de onde estiver, seja por motivo de viagens, mudança de endereço ou outros. Isso garante uma consistência essencial na frequência dos atendimentos, além de poupar tempo e dinheiro gastos na locomoção até um consultório físico.</p>
                 </div>
 
-                <NextLink href={WPP_LINK} target='_blank' className="block uppercase text-sand text-lg text-center tracking-widest p-4 border-t border-sand cursor-pointer hover:bg-sand/10 transition">
+                <NextLink href={WPP_LINK} target='_blank' className="block uppercase text-sand text-lg text-center tracking-widest p-4 border-t border-sand cursor-pointer hover:bg-sand/10 transition" aria-label='Entre em contato via WhatsApp'>
                   Entre em contato
                 </NextLink>
               </div>
@@ -105,15 +105,15 @@ export default function Home() {
             <h2 className="text-center mb-14">Como começar?</h2>
 
             <div className="flex flex-col items-center lg:flex-row">
-              <div className="relative p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
+              <div className="relative p-6 border border-light/40 bg-white/10 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
                 <p className="text-lg font-bold mb-4">Entrar em contato</p>
-                <p>Entre em contato via Whatsapp, ou <NextLink href={WPP_LINK} target='_blank' className='underline'>clique aqui</NextLink>.</p>
+                <p>Entre em contato via Whatsapp, ou <NextLink href={WPP_LINK} target='_blank' className='underline' aria-label='Entre em contato via WhatsApp'>clique aqui</NextLink>.</p>
                 <span className='absolute bottom-0 right-2 text-[10rem] leading-none text-sand opacity-30'>1</span>
               </div>
 
               <div className="w-[2px] h-20 bg-light/40 lg:h-[2px] lg:w-auto lg:flex-1"></div>
 
-              <div className="relative p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
+              <div className="relative p-6 border border-light/40 bg-white/10 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
                 <p className="text-lg font-bold mb-4">Agendar a sessão de apresentação</p>
                 <p>A sessão é gratuita e tem duração média de 30 minutos, servindo para contato inicial e possíveis dúvidas.</p>
                 <span className='absolute bottom-0 right-2 text-[10rem] leading-none text-sand opacity-30'>2</span>
@@ -121,7 +121,7 @@ export default function Home() {
 
               <div className="w-[2px] h-20 bg-light/40 lg:h-[2px] lg:w-auto lg:flex-1"></div>
 
-              <div className="relative p-6 border border-light/40 bg-white/20 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
+              <div className="relative p-6 border border-light/40 bg-white/10 backdrop-blur-lg text-light w-full md:w-72 h-52 justify-self-center">
                 <p className="text-lg font-bold mb-4">Iniciar o acompanhamento</p>
                 <p>Se após a apresentação você desejar iniciar o acompanhamento, será feito o agendamento conforme disponibilidade.</p>
                 <span className='absolute bottom-0 right-2 text-[10rem] leading-none text-sand opacity-30'>3</span>
@@ -161,7 +161,7 @@ export default function Home() {
                   <GrLocation size={24} />
                   <p>São Paulo - SP</p>
                 </div>
-                <NextLink href={WPP_LINK} target="_blank" className="flex gap-4">
+                <NextLink href={WPP_LINK} target="_blank" className="flex gap-4" aria-label='Entre em contato via WhatsApp'>
                   <MdWhatsapp size={24} />
                   <p>(11) 95437-2430</p>
                 </NextLink>
