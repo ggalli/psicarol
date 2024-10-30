@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={twMerge(theSeasons.variable, roboto.variable)}>
+    <html lang="pt" className={twMerge(theSeasons.variable, roboto.variable)}>
       <body className={roboto.className}>{children}</body>
       <GoogleTagManager gtmId="GTM-KMZMVLTK" />
     </html>
