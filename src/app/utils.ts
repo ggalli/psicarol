@@ -29,18 +29,3 @@ export const QUESTIONS = [
 ];
 
 export const TOPICS = ['Ansiedade', 'Depressão', 'Baixa autoestima e<br/>Autoimagem', 'Transtorno disfórico<br/>pré-menstrual', 'Compulsão e Vícios', 'Baby Blues e<br/>Depressão pós-parto', 'Álcool e Drogas', 'Fobia Social', 'Outros'];
-
-export const STEPS = [
-  {
-    title: 'Entrar em contato',
-    text: 'Entre em contato via Whatsapp, ou clique aqui.'
-  },
-  {
-    title: 'Agendar a sessão de apresentação?',
-    text: 'A sessão é gratuita e tem duração média de 30 minutos, servindo para contato inicial e possíveis dúvidas.'
-  },
-  {
-    title: 'Iniciar o acompanhamento',
-    text: 'Se após a apresentação você desejar iniciar o acompanhamento, será feito o agendamento conforme disponibilidade.'
-  },
-];
