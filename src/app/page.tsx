@@ -5,7 +5,7 @@ import { MdDevices, MdMailOutline, MdWhatsapp } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
 import { FiInstagram } from "react-icons/fi";
 import { INSTAGRAM_LINK, WPP_LINK, QUESTIONS, TOPICS } from "./utils";
-import carolImg from '../../public/images/carol-3.jpg'
+import carolImg from '../../public/images/carol-3.webp'
 
 export default function Home() {
   return (
