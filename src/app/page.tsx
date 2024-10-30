@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 import Image from "next/image";
-import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger, PhotoCarousel, Logo } from "./components";
+import { Header, Accordion, AccordionContent, AccordionItem, AccordionTrigger, Logo } from "./components";
 import { MdDevices, MdMailOutline, MdWhatsapp } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
 import { FiInstagram } from "react-icons/fi";
@@ -30,9 +30,6 @@ export default function Home() {
           <div className="container">
             <div className="relative md:-top-20 flex flex-col items-center md:flex-row md:items-start">
               <Image src={carolImg} alt='Foto da psicóloga Carol Godoy sentada em uma cadeira com uma estante com livros atrás' className='md:max-w-[340px] border border-sand' quality={90} priority />
-              {/* <div className="w-full md:w-2/5 lg:1/3">
-                <PhotoCarousel />
-              </div> */}
 
               <div className="p-6 bg-white/40 backdrop-blur-xl border border-sand lg:text-lg">
                 <h2 className="mb-6 text-4xl">Sobre mim</h2>
